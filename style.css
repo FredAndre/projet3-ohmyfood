@@ -41,28 +41,40 @@ header
 	height: auto;
 	background-color: #CCCFD2;
 	border:none;
-	border-top: 2px solid #AFB2B5;
+	border-top: 0px solid #AFB2B5;
 	font-size: 20px;
 	flex-wrap: wrap;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin: auto;
-
+	
 }
 .rechercheVille::placeholder
 {
-	text-align: center;
+	text-align: left;
+	padding-left: 10px;
 	color: black;
 	font-weight: bold;
 	font-family: 'Roboto', sans-serif;
 }
+.rechercheIcone
+{
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	width: auto;
+	border-top: 5px solid #AFB2B5;
+	background-color: #CCCFD2;
+	justify-content: center;
+}
 .rechercheIcone i
 {
-	background-color: green;
+
+	display: flex;
 	font-size: 25px;
-	position: absolute;
-	left: 50px;
-	top: 20px;
+	width: 100px;
+	height: 65px;	
+	justify-content: flex-end;
+	align-items: center;
 }
 .localisation h2
 {
@@ -141,16 +153,7 @@ li::before
 	color: white;
 	position: relative;
 	right: 23px;
-
 }
-
-
-
-
-
-
-
-
 .restaurant
 {
 	display: flex;
@@ -161,7 +164,7 @@ li::before
 	padding-bottom: 50px;
 
 }
-.restaurant h2
+.restaurant h2 
 {
 	margin-left: 20px;
 }
@@ -175,6 +178,10 @@ li::before
 	margin: 20px;
 	margin-top: 0px;
 	position: relative;
+}
+.flouLaPaletteDuGout
+{
+	display: none;
 }
 .photoRestaurant
 {
@@ -219,6 +226,8 @@ li::before
 	right:30px;
 	border-radius: 5px;
 }
+
+
 footer
 {
 	display: flex;
@@ -236,4 +245,79 @@ p i
 {
 	margin-right: 15px;
 }
+footer a
+{
+	color: white;
+	border: none;
+}
+@media all and (min-width:500px) and (max-width: 1024px)
+{	
+	.rechercheVille
+	{
+	width: 50%;
+	}
+	.rechercheIcone
+	{
+		width: 80%;
+		justify-content: center;
+	}
+	li
+	{
+		background-color: red;
+		width: 60%;
+	}
+}
+@media all and (min-width:1024px)
+{
+	.rechercheVille
+	{
+	width: 50%;
+	}
+	.rechercheIcone
+	{
+		width: 40%;
+		justify-content: center;
+		border-radius: 20px;
+	}
+	.fonctionnement
+	{
+		text-align: center;
+	}
+	.titreFonctionnement
+	{
+		
+		display: inline-flex;
+	}
+	ol
+	{
+		display: flex;
+		justify-content: center;
+	}
+	li
+	{
+		display: inline-flex;
+		
+		width: 30%;
+	}
+	.restaurant
+	{
+		background-image: url("images/Tour_eiffel.JPG");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		height: auto;
 
+	}
+	.blocRestaurant
+	{
+		margin-left: 120px;
+		margin-right: 120px;
+		width: 50%;	
+		border: 4mm ridge white;
+		border-radius: 0px;
+	}
+	.photoRestaurant, .nomRestaurant
+	{
+		border-radius: 0px;
+	}
+}
