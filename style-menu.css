@@ -134,3 +134,20 @@ p i
 {
 	margin-right: 15px;
 }
+@media all and (min-width:500px) and (max-width: 1024px)
+{
+
+}
+@media all and (min-width:1024px)
+{
+	#entree, #plat, #desserts
+	{
+		display: flex;
+		flex-direction: row;
+		margin-top: 10px;
+	}
+	.repas
+	{
+		width: 25%;
+	}
+}
