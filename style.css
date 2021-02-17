@@ -6,6 +6,14 @@ body
 {
 	cursor: pointer;
 }
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+
 header
 {
 	display: flex;
@@ -15,6 +23,7 @@ header
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
+
 #logo
 {
 	display: flex;
@@ -99,23 +108,28 @@ header
 .rechercher
 {
 	display: flex;
-	background-color: #9356DC;
+	
+	background: linear-gradient(#FF79DA, #9356DC);
 	color: white;
 	height: auto;
 	width: auto;
 	font-size: 20px;
 	margin: auto;
 	margin-bottom: 50px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-radius: 20px 20px 20px 20px;
+	padding: 15px 30px 15px 30px;
+	box-shadow: 5px 5px 5px grey;
+	border-radius: 50px 50px 50px 50px;
 	flex-wrap: wrap;
-	
+	border:none;	
+}
+.rechercher:hover 
+{
+	background-color: #FF79DA;
+	box-shadow: 10px 10px 10px #9356DC; ;
 }
 ol
 {
 	list-style-type: none;
-
 }
 li
 {
@@ -154,6 +168,7 @@ li::before
 	position: relative;
 	right: 23px;
 }
+
 .restaurant
 {
 	display: flex;
@@ -162,7 +177,10 @@ li::before
 	flex-direction: column;
 	background-color: #E5EAEE;
 	padding-bottom: 50px;
-
+}
+.restaurant a
+{
+	text-decoration: none;
 }
 .restaurant h2 
 {
@@ -178,10 +196,6 @@ li::before
 	margin: 20px;
 	margin-top: 0px;
 	position: relative;
-}
-.flouLaPaletteDuGout
-{
-	display: none;
 }
 .photoRestaurant
 {
@@ -205,7 +219,7 @@ li::before
 {
 	font-weight: bold;
 }
-.nomRestaurant i
+.fa-heart
 {
 	float: right;
 	color: #3C3D3E;
@@ -213,6 +227,16 @@ li::before
 	margin-right: 20px;
 	margin-top: 10px;
 	font-size: 25px;
+}
+.fa-heart::before 
+{
+    transition: color 2s ease-out;
+}
+.fa-heart:hover::before
+{
+    color: #9356DC;
+    cursor: pointer;
+    font-weight: bold;
 }
 .nouveau
 {
@@ -234,6 +258,7 @@ footer
 	background-color: #3C3D3E;
 	color: white;
 	padding-left: 20px;
+	padding-bottom: 50px;
 	flex-direction: column;
 }
 footer h2
@@ -248,7 +273,7 @@ p i
 footer a
 {
 	color: white;
-	border: none;
+	text-decoration: none;
 }
 @media all and (min-width:500px) and (max-width: 1024px)
 {	

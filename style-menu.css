@@ -38,9 +38,8 @@ header i
 	background-color: #E5EAEE;
 	flex-direction: column;
 	border-radius: 40px 40px 0px 0px;
-	position: relative;
-	top: -50px;
 	padding-bottom: 30px;
+
 }
 .titreRestaurant
 {
@@ -54,7 +53,7 @@ header i
 	margin-right: 10px;
 	
 }
-.titreRestaurant i
+.fa-heart
 {
 	float: right;
 	color: #3C3D3E;
@@ -62,7 +61,15 @@ header i
 	margin-left: 50px;
 	margin-top: 5px;
 	font-size: 25px;
-
+}
+.fa-heart::before {
+    
+    transition: color 2s ease-out;
+}
+.fa-heart:hover::before{
+    color: #9356DC;
+    cursor: pointer;
+    font-weight: bold;
 }
 .repasTitre
 {
@@ -72,7 +79,7 @@ header i
 	margin-left: 20px;
 	margin-top: 30px;
 	border-bottom: 2px solid #72B2F2;
-	flex-wrap: wrap;
+	
 }
 .repas
 {
@@ -94,27 +101,24 @@ header i
 }
 .repas p
 {
-	
+	background-color: red;
+	text-align: left;
 	margin-top: 0px;
-	width: auto;
+	width: 100%;
 	height: auto;
-	flex-wrap: wrap;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
-.prix
+.repas span
 {	
-
+	background-color: blue;
+	
 	width: 50px;
 	font-weight: bold;
-	
+	float: right;	
+	padding-left: 5px;
 }
-
-
-
-
-
-
-
-
 
 footer
 {
@@ -123,6 +127,7 @@ footer
 	color: white;
 	padding-left: 20px;
 	flex-direction: column;
+	padding-bottom: 50px;
 }
 footer h2
 {
@@ -134,6 +139,12 @@ p i
 {
 	margin-right: 15px;
 }
+footer a
+{
+	color: white;
+	text-decoration: none;
+} 
+
 @media all and (min-width:500px) and (max-width: 1024px)
 {
 
